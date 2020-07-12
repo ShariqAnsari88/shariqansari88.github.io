@@ -1,0 +1,46 @@
+.expert-advise {
+    background-color: lighten($secondary-color, 70);
+    .e-a-inner-content {
+        padding: 4rem 0;
+        margin: 0 auto;
+        width: 75%;
+        text-align: center;
+        article {
+            font-size: 1.4rem;
+            @include media($medium) {
+                font-size: 1.6rem;
+            }
+            br {
+                display: none;
+                @include media($medium) {
+                    display: inline-block;
+                }
+            }
+        }
+        .len-text {
+            a {
+                padding: 1rem;
+                text-decoration: none;
+                color: $z-black;
+                font-size: 1.4rem;
+                text-transform: uppercase;
+                letter-spacing: 0.2rem;
+            }
+        }
+        .main-cta {
+            a {
+                font-size:2.4rem;
+                font-style: italic;
+                position: relative;
+                color: $z-black;
+                text-decoration: none;
+                &:after {
+                    position: absolute;
+                    content: "....";
+                    bottom: -1.5rem;
+                    left: calc(50% - 12px);
+                }
+            }
+        }
+    }
+}

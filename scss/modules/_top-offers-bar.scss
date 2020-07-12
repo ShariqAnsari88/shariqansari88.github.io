@@ -1,0 +1,35 @@
+.top-offers-bar {
+    background: lighten($primary-color, 45);
+    .container {
+        .layout {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+            padding:1rem 2rem;
+            @include media($medium) {
+                flex-flow: row;
+                padding:0;
+            }
+
+            p {
+                padding-bottom: 0;
+                @include small-font-style;
+            }
+            p,a {
+                text-transform: uppercase;
+                span {
+                    font-family: $bold;
+                }
+            }
+            a {
+                display: none;
+                margin-left: 1rem;
+                @include media($medium) {
+                    display: block;
+                }
+            }
+        }
+    }
+}

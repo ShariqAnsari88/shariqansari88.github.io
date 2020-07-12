@@ -1,0 +1,57 @@
+.dd-options {
+    position: absolute;
+    background: white;
+    width: calc(100% + .2rem);
+    top: 4.5rem;
+    left: -.1rem;
+    display: none;
+    @include box-shadow;
+
+    &.show {
+        display: block;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+            padding: 0;
+        li {
+            margin: 0;
+            padding: 1rem 2rem;
+            line-height: 1.4;
+            border-bottom: .1rem solid lighten($z-black, 90);
+            text-transform: capitalize;
+
+            li {
+                border: none;
+                margin-left: -2rem;
+                margin-right: -2rem;
+                padding-left: 2rem;
+                padding-right: 2rem;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: lighten($black, 75);
+                }
+
+                &.selected {
+                    background: lighten($primary-color, 45);
+                }
+            }
+
+            &.first {
+                font-weight: 700;
+            }
+
+            &.first,
+            &.last {
+                padding-top: 1.5rem;
+                padding-bottom: 1.5rem;
+            }
+
+            a {
+                @include link;
+            }
+        }
+    }
+}
